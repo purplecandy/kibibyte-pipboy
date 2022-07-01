@@ -7,7 +7,8 @@ const App = () => {
 
   return (
     <div>
-      {isAgreed ? <Interface /> : <Terminal onAgree={() => setAgree(true)} />}
+      <Interface />
+      {/* {isAgreed ? <Interface /> : <Terminal onAgree={() => setAgree(true)} />} */}
     </div>
   );
 };

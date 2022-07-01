@@ -656,7 +656,7 @@ a:hover {
 .vboy {
   height: 180px;
   pointer-events: none;
-  background-image: url("https://cybersandbox.ca/resources/vaultboy-tp.gif");
+  /* background-image: url("https://cybersandbox.ca/resources/vaultboy-tp.gif"); */
   background-position: 60% center;
   background-repeat: no-repeat;
   -webkit-filter: hue-rotate(-52deg) saturate(0.9);
