@@ -44,6 +44,7 @@ body {
   width: 100%;
   height: 100%;
   font-size: 15px;
+  cursor:none;
 }
 
 h1,
@@ -692,7 +693,7 @@ a:hover {
 .cursor {
   position: fixed;
   margin-top: -20px;
-  z-index: -1;
+  z-index: 1;
   pointer-events: none;
 }
 
