@@ -99,6 +99,176 @@ const HandymanGif = () => (
   ></div>
 );
 
+const FullStackInfo = () => (
+  <div>
+    <ul class="info-table">
+      <li class="vboy-wrap"></li>
+      <li class="clear">
+        <span class="fade-a">
+          <b>DAM</b> 52
+        </span>
+        <span class="fade-b">
+          <b>DPS</b>
+          49.3
+        </span>
+      </li>
+      <li>
+        <b>WG</b> 6.00
+      </li>
+      <li>
+        <b>VAL</b> 2528
+      </li>
+      <li>
+        <b>CND</b>{" "}
+        <span class="condition">
+          <span class="fill" style="width: 8%;"></span>
+        </span>
+      </li>
+      <li class="span-2">.308 round (5/72)</li>
+    </ul>
+    <p class="extra" style={{ overflowY: "auto", height: 100 }}>
+      <b>Description</b> Contrary to popular belief, Lorem Ipsum is not simply
+      random text. It has roots in a piece of classical
+    </p>
+  </div>
+);
+
+const TeamPlayerInfo = () => (
+  <div>
+    <ul class="info-table">
+      <li class="vboy-wrap"></li>
+      <li class="clear">
+        <span class="fade-a">
+          <b>DAM</b> 52
+        </span>
+        <span class="fade-b">
+          <b>DPS</b>
+          49.3
+        </span>
+      </li>
+      <li>
+        <b>WG</b> 6.00
+      </li>
+      <li>
+        <b>VAL</b> 2528
+      </li>
+      <li>
+        <b>CND</b>{" "}
+        <span class="condition">
+          <span class="fill" style="width: 8%;"></span>
+        </span>
+      </li>
+      <li class="span-2">.308 round (5/72)</li>
+    </ul>
+    <p class="extra" style={{ overflowY: "auto", height: 100 }}>
+      <b>Description</b> Contrary to popular belief, Lorem Ipsum is not simply
+      random text. It has roots in a piece of classical
+    </p>
+  </div>
+);
+
+const EntertainerInfo = () => (
+  <div>
+    <ul class="info-table">
+      <li class="vboy-wrap"></li>
+      <li class="clear">
+        <span class="fade-a">
+          <b>DAM</b> 52
+        </span>
+        <span class="fade-b">
+          <b>DPS</b>
+          49.3
+        </span>
+      </li>
+      <li>
+        <b>WG</b> 6.00
+      </li>
+      <li>
+        <b>VAL</b> 2528
+      </li>
+      <li>
+        <b>CND</b>{" "}
+        <span class="condition">
+          <span class="fill" style="width: 8%;"></span>
+        </span>
+      </li>
+      <li class="span-2">.308 round (5/72)</li>
+    </ul>
+    <p class="extra" style={{ overflowY: "auto", height: 100 }}>
+      <b>Description</b> Contrary to popular belief, Lorem Ipsum is not simply
+      random text. It has roots in a piece of classical
+    </p>
+  </div>
+);
+
+const NerdInfo = () => (
+  <div>
+    <ul class="info-table">
+      <li class="vboy-wrap"></li>
+      <li class="clear">
+        <span class="fade-a">
+          <b>DAM</b> 52
+        </span>
+        <span class="fade-b">
+          <b>DPS</b>
+          49.3
+        </span>
+      </li>
+      <li>
+        <b>WG</b> 6.00
+      </li>
+      <li>
+        <b>VAL</b> 2528
+      </li>
+      <li>
+        <b>CND</b>{" "}
+        <span class="condition">
+          <span class="fill" style="width: 8%;"></span>
+        </span>
+      </li>
+      <li class="span-2">.308 round (5/72)</li>
+    </ul>
+    <p class="extra" style={{ overflowY: "auto", height: 100 }}>
+      <b>Description</b> Contrary to popular belief, Lorem Ipsum is not simply
+      random text. It has roots in a piece of classical
+    </p>
+  </div>
+);
+
+const HandymanInfo = () => (
+  <div>
+    <ul class="info-table">
+      <li class="vboy-wrap"></li>
+      <li class="clear">
+        <span class="fade-a">
+          <b>DAM</b> 52
+        </span>
+        <span class="fade-b">
+          <b>DPS</b>
+          49.3
+        </span>
+      </li>
+      <li>
+        <b>WG</b> 6.00
+      </li>
+      <li>
+        <b>VAL</b> 2528
+      </li>
+      <li>
+        <b>CND</b>{" "}
+        <span class="condition">
+          <span class="fill" style="width: 8%;"></span>
+        </span>
+      </li>
+      <li class="span-2">.308 round (5/72)</li>
+    </ul>
+    <p class="extra" style={{ overflowY: "auto", height: 100 }}>
+      <b>Description</b> Contrary to popular belief, Lorem Ipsum is not simply
+      random text. It has roots in a piece of classical
+    </p>
+  </div>
+);
+
 const ItemsTabPanel = () => {
   const [activeProfile, setProfile] = useState(profiles.vaultboy);
 
@@ -195,40 +365,16 @@ const ItemsTabPanel = () => {
                 [profiles.vaultboy]: <VaultBoyGif />,
               }[activeProfile]
             }
-            {activeProfile === profiles.vaultboy ? (
-              <p>Please select a profile</p>
-            ) : (
-              <div>
-                <ul class="info-table">
-                  <li class="vboy-wrap"></li>
-                  <li class="clear">
-                    <span class="fade-a">
-                      <b>DAM</b> 52
-                    </span>
-                    <span class="fade-b">
-                      <b>DPS</b>
-                      49.3
-                    </span>
-                  </li>
-                  <li>
-                    <b>WG</b> 6.00
-                  </li>
-                  <li>
-                    <b>VAL</b> 2528
-                  </li>
-                  <li>
-                    <b>CND</b>{" "}
-                    <span class="condition">
-                      <span class="fill" style="width: 83%;"></span>
-                    </span>
-                  </li>
-                  <li class="span-2">.308 round (5/72)</li>
-                </ul>
-                <p class="extra">
-                  <b>MODS</b> Hunting Rifle Scope
-                </p>
-              </div>
-            )}
+            {
+              {
+                [profiles.fullstack]: <FullStackInfo />,
+                [profiles.entertainer]: <EntertainerInfo />,
+                [profiles.teamplayer]: <TeamPlayerInfo />,
+                [profiles.handyman]: <HandymanInfo />,
+                [profiles.nerd]: <NerdInfo />,
+                [profiles.vaultboy]: <p>Please select a profile</p>,
+              }[activeProfile]
+            }
           </div>
         </div>
       </div>
