@@ -1,53 +1,26 @@
+import ItemsTab from "./items_tab";
+import MiscTab from "./misc_tab";
+import QuestsTab from "./quests_tab";
+import RadioTab from "./radio_tab";
+import StatsTab from "./stats_tab";
+
 const Tabs = () => (
   <div>
     <ul class="pip-foot" role="tablist">
       <li>
-        <a
-          class="active"
-          href="#items"
-          aria-current="page"
-          data-bs-toggle="tab"
-          data-bs-target="#items"
-          role="tab"
-          aria-selected="true"
-        >
-          Items
-        </a>
+        <ItemsTab />
       </li>
       <li>
-        <a
-          href="#stats"
-          data-bs-toggle="tab"
-          data-bs-target="#stats"
-          role="tab"
-        >
-          Stats
-        </a>
+        <StatsTab />
       </li>
       <li>
-        <a
-          href="#quests"
-          data-bs-toggle="tab"
-          data-bs-target="#quests"
-          role="tab"
-        >
-          Quests
-        </a>
+        <QuestsTab />
       </li>
       <li>
-        <a href="#misc" data-bs-toggle="tab" data-bs-target="#misc" role="tab">
-          Misc
-        </a>
+        <MiscTab />
       </li>
       <li>
-        <a
-          href="#radio"
-          data-bs-toggle="tab"
-          data-bs-target="#radio"
-          role="tab"
-        >
-          Radio
-        </a>
+        <RadioTab />
       </li>
     </ul>
   </div>
