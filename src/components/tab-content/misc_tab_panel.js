@@ -7,25 +7,29 @@ const MiscTabPanel = () => (
   >
     <h3 class="pip-title">Misc</h3>
     <div class="pip-body">
-      <ul class="options">
-        <li class="active">
-          <a href="#misc-1" data-toggle="tab">
-            Backlight Color
-          </a>
+      <ul class="options" role="tablist">
+        <li
+          data-bs-toggle="tab"
+          data-bs-target="#misc-1"
+          role="tab"
+          class="active"
+        >
+          <a>Backlight Color</a>
         </li>
-        <li>
-          <a href="#misc-2" data-toggle="tab">
-            Where does it come from?
-          </a>
+        <li data-bs-toggle="tab" data-bs-target="#misc-2" role="tab">
+          <a>Where does it come from?</a>
         </li>
-        <li>
-          <a href="#misc-3" data-toggle="tab">
-            Why do we use it?
-          </a>
+        <li data-bs-toggle="tab" data-bs-target="#misc-3" role="tab">
+          <a>Why do we use it?</a>
         </li>
       </ul>
       <div class="tab-content">
-        <div class="info active tab-pane fade in" id="misc-1">
+        <div
+          class="info active tab-pane fade in show"
+          id="misc-1"
+          role="tabpanel"
+          aria-labelledby="misc-1-tab"
+        >
           <div class="post">
             <p>Select HUD / Backlight Color</p>
             <form class="colors">
@@ -51,7 +55,12 @@ const MiscTabPanel = () => (
           </div>
         </div>
 
-        <div class="info tab-pane fade" id="misc-2">
+        <div
+          class="info tab-pane fade"
+          id="misc-2"
+          role="tabpanel"
+          aria-labelledby="misc-2-tab"
+        >
           <div class="post">
             <p>
               Contrary to popular belief, Lorem Ipsum is not simply random text.
@@ -77,7 +86,12 @@ const MiscTabPanel = () => (
           </div>
         </div>
 
-        <div class="info tab-pane fade" id="misc-3">
+        <div
+          class="info tab-pane fade"
+          id="misc-3"
+          role="tabpanel"
+          aria-labelledby="misc-3-tab"
+        >
           <div class="post">
             <p>
               It is a long established fact that a reader will be distracted by

@@ -21,21 +21,20 @@ const StatsTabPanel = () => (
       </li>
     </ul>
     <div class="pip-body">
-      <ul class="side-menu">
-        <li class="active">
-          <a href="#cnd" data-toggle="tab">
-            CND
-          </a>
+      <ul class="side-menu" role="tablist">
+        <li
+          class="active"
+          data-bs-toggle="tab"
+          data-bs-target="#cnd"
+          role="tab"
+        >
+          <a>CND</a>
         </li>
-        <li>
-          <a href="#rad" data-toggle="tab">
-            RAD
-          </a>
+        <li data-bs-toggle="tab" data-bs-target="#rad" role="tab">
+          <a>RAD</a>
         </li>
-        <li>
-          <a href="#eff" data-toggle="tab">
-            EFF
-          </a>
+        <li data-bs-toggle="tab" data-bs-target="#eff" role="tab">
+          <a>EFF</a>
         </li>
         <li class="disabled">
           <a href="#">H20</a>
@@ -48,7 +47,13 @@ const StatsTabPanel = () => (
         </li>
       </ul>
       <div class="tab-content">
-        <div class="tab-pane fade in active" id="cnd">
+        <div
+          class="tab-pane fade in active show"
+          show
+          id="cnd"
+          role="tabpanel"
+          aria-labelledby="cnd-tab"
+        >
           <div class="stats-page">
             <h4>Condition</h4>
 
@@ -60,7 +65,12 @@ const StatsTabPanel = () => (
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="rad">
+        <div
+          class="tab-pane fade"
+          id="rad"
+          role="tabpanel"
+          aria-labelledby="rad-tab"
+        >
           <div class="stats-page">
             <h4>Radiation</h4>
             <ul>
@@ -68,7 +78,12 @@ const StatsTabPanel = () => (
             </ul>
           </div>
         </div>
-        <div class="tab-pane fade" id="eff">
+        <div
+          class="tab-pane fade"
+          id="eff"
+          role="tabpanel"
+          aria-labelledby="eff-tab"
+        >
           <div class="stats-page">
             <h4>Effects</h4>
             <ul>

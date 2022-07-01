@@ -7,7 +7,7 @@ const RadioTabPanel = () => (
   >
     <h3 class="pip-title">Radio</h3>
     <div class="pip-body">
-      <ul class="options">
+      <ul class="options" role="tablist">
         <li>
           <input type="checkbox" id="check" checked />
           <label for="check">00_default</label>

@@ -1,6 +1,6 @@
 const ItemsTabPanel = () => (
   <div
-    class="tab-pane fade-in show active"
+    class="tab-pane fade show active"
     role="tabpanel"
     id="items"
     aria-labelledby="items-tab"
