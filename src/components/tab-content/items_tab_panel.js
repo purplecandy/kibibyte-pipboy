@@ -4,8 +4,10 @@ import teamplayer_gif from "../../assets/gifs/teamplayer.gif";
 import handyman_gif from "../../assets/gifs/handyman.gif";
 import nerd_gif from "../../assets/gifs/nerd.gif";
 import entertainer_gif from "../../assets/gifs/entertainer.gif";
+import { useState } from "preact/hooks";
 
 const profiles = Object.freeze({
+  vaultboy: "vaultboy",
   fullstack: "fullstack",
   teamplayer: "teamplayer",
   entertainer: "entertainer",
@@ -13,7 +15,93 @@ const profiles = Object.freeze({
   handyman: "handyman",
 });
 
+const VaultBoyGif = () => (
+  <div
+    class="vboy"
+    style={{
+      margin: "0 auto",
+      marginLeft: 120,
+      background: `url(${vaultboy_gif})`,
+      backgroundSize: "contain",
+      backgroundRepeat: "no-repeat",
+    }}
+  ></div>
+);
+
+const FullStackGif = () => (
+  <div
+    class="vboy"
+    style={{
+      margin: "0 auto",
+      marginLeft: 80,
+      background: `url(${fullstack_vault_boy_gif})`,
+      backgroundSize: "contain",
+      backgroundRepeat: "no-repeat",
+    }}
+  ></div>
+);
+
+const TeamPlayerGif = () => (
+  <div
+    class="vboy"
+    style={{
+      margin: "0 auto",
+      marginTop: -40,
+      marginBottom: -40,
+      marginLeft: 70,
+      height: 240,
+      background: `url(${teamplayer_gif})`,
+      backgroundSize: "contain",
+      backgroundRepeat: "no-repeat",
+    }}
+  ></div>
+);
+
+const EntertainerGif = () => (
+  <div
+    class="vboy"
+    style={{
+      margin: "0 auto",
+      marginLeft: 60,
+      background: `url(${entertainer_gif})`,
+      backgroundSize: "contain",
+      backgroundRepeat: "no-repeat",
+    }}
+  ></div>
+);
+
+const NerdGif = () => (
+  <div
+    class="vboy"
+    style={{
+      margin: "0 auto",
+      marginTop: -20,
+      marginBottom: -40,
+      marginLeft: 60,
+      height: 220,
+      background: `url(${nerd_gif})`,
+      backgroundSize: "contain",
+      backgroundRepeat: "no-repeat",
+    }}
+  ></div>
+);
+
+const HandymanGif = () => (
+  <div
+    class="vboy"
+    style={{
+      margin: "0 auto",
+      marginLeft: 60,
+      background: `url(${handyman_gif})`,
+      backgroundSize: "contain",
+      backgroundRepeat: "no-repeat",
+    }}
+  ></div>
+);
+
 const ItemsTabPanel = () => {
+  const [activeProfile, setProfile] = useState(profiles.vaultboy);
+
   return (
     <div
       class="tab-pane fade show active"
@@ -44,20 +132,49 @@ const ItemsTabPanel = () => {
       <div class="pip-body">
         <ul class="options">
           <li>
-            <input type="radio" id="radio1" name="radio" />
+            <input
+              type="radio"
+              id="radio1"
+              name="radio"
+              onChange={() => setProfile(profiles.fullstack)}
+            />
             <label for="radio1">Default</label>
           </li>
           <li>
-            <input type="radio" checked="checked" id="radio2" name="radio" />
+            <input
+              type="radio"
+              id="radio2"
+              name="radio"
+              onChange={() => setProfile(profiles.entertainer)}
+            />
             <label for="radio2">Entertainer</label>
           </li>
           <li>
-            <input type="radio" id="radio3" name="radio" />
-            <label for="radio3">Passionate Porgammer</label>
+            <input
+              type="radio"
+              id="radio3"
+              name="radio"
+              onChange={() => setProfile(profiles.teamplayer)}
+            />
+            <label for="radio3">Team Player</label>
           </li>
           <li>
-            <input type="radio" id="radio4" name="radio" />
-            <label for="radio4">Full Stack Developer</label>
+            <input
+              type="radio"
+              id="radio4"
+              name="radio"
+              onChange={() => setProfile(profiles.handyman)}
+            />
+            <label for="radio4">Problem Solver</label>
+          </li>
+          <li>
+            <input
+              type="radio"
+              id="radio5"
+              name="radio"
+              onClick={() => setProfile(profiles.nerd)}
+            />
+            <label for="radio5">Nerd</label>
           </li>
         </ul>
         <div class="info">
@@ -68,55 +185,50 @@ const ItemsTabPanel = () => {
             <a href="#">Mod</a>
           </div>
           <div class="info-body">
-            <ul class="info-table">
-              <li class="vboy-wrap">
-                {/* <div class="item-icon">
-                <span class="icon">
-                  <img
-                    class="filter"
-                    src="https://cybersandbox.ca/resources/556mm_round_icon.png"
-                  />
-                </span>
-                0
-              </div> */}
-                <div
-                  class="vboy"
-                  style={{
-                    margin: "0 auto",
-                    background: `url(${teamplayer_gif})`,
-                    backgroundSize: "contain",
-                    backgroundRepeat: "no-repeat",
-                  }}
-                >
-                  {/* <img src={fullstack_vault_boy_gif} width={170} /> */}
-                </div>
-              </li>
-              <li class="clear">
-                <span class="fade-a">
-                  <b>DAM</b> 52
-                </span>
-                <span class="fade-b">
-                  <b>DPS</b>
-                  49.3
-                </span>
-              </li>
-              <li>
-                <b>WG</b> 6.00
-              </li>
-              <li>
-                <b>VAL</b> 2528
-              </li>
-              <li>
-                <b>CND</b>{" "}
-                <span class="condition">
-                  <span class="fill" style="width: 83%;"></span>
-                </span>
-              </li>
-              <li class="span-2">.308 round (5/72)</li>
-            </ul>
-            <p class="extra">
-              <b>MODS</b> Hunting Rifle Scope
-            </p>
+            {
+              {
+                [profiles.fullstack]: <FullStackGif />,
+                [profiles.entertainer]: <EntertainerGif />,
+                [profiles.teamplayer]: <TeamPlayerGif />,
+                [profiles.handyman]: <HandymanGif />,
+                [profiles.nerd]: <NerdGif />,
+                [profiles.vaultboy]: <VaultBoyGif />,
+              }[activeProfile]
+            }
+            {activeProfile === profiles.vaultboy ? (
+              <p>Please select a profile</p>
+            ) : (
+              <div>
+                <ul class="info-table">
+                  <li class="vboy-wrap"></li>
+                  <li class="clear">
+                    <span class="fade-a">
+                      <b>DAM</b> 52
+                    </span>
+                    <span class="fade-b">
+                      <b>DPS</b>
+                      49.3
+                    </span>
+                  </li>
+                  <li>
+                    <b>WG</b> 6.00
+                  </li>
+                  <li>
+                    <b>VAL</b> 2528
+                  </li>
+                  <li>
+                    <b>CND</b>{" "}
+                    <span class="condition">
+                      <span class="fill" style="width: 83%;"></span>
+                    </span>
+                  </li>
+                  <li class="span-2">.308 round (5/72)</li>
+                </ul>
+                <p class="extra">
+                  <b>MODS</b> Hunting Rifle Scope
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>

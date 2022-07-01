@@ -8,7 +8,7 @@ const ItemsTab = () => (
     role="tab"
     aria-selected="true"
   >
-    Items
+    Profiles
   </a>
 );
 
