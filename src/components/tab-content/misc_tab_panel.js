@@ -28,7 +28,7 @@ const MiscTabPanel = () => (
         <div class="info active tab-pane fade in" id="misc-1">
           <div class="post">
             <p>Select HUD / Backlight Color</p>
-            <form class="colors" onChange="getColor();">
+            <form class="colors">
               <input
                 id="b-amber"
                 type="radio"
@@ -45,13 +45,7 @@ const MiscTabPanel = () => (
               <label for="b-blue">Blue</label>
               <input id="b-white" type="radio" name="colors" value="white" />
               <label for="b-white">White</label>
-              <input
-                id="b-black"
-                type="radio"
-                name="colors"
-                value="black"
-                onChange="getColor();"
-              />
+              <input id="b-black" type="radio" name="colors" value="black" />
               <label for="b-black">Science!</label>
             </form>
           </div>
