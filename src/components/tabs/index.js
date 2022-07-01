@@ -5,25 +5,23 @@ import RadioTab from "./radio_tab";
 import StatsTab from "./stats_tab";
 
 const Tabs = () => (
-  <div>
-    <ul class="pip-foot" role="tablist">
-      <li>
-        <ItemsTab />
-      </li>
-      <li>
-        <StatsTab />
-      </li>
-      <li>
-        <QuestsTab />
-      </li>
-      <li>
-        <MiscTab />
-      </li>
-      <li>
-        <RadioTab />
-      </li>
-    </ul>
-  </div>
+  <ul class="pip-foot" role="tablist">
+    <li>
+      <ItemsTab />
+    </li>
+    <li>
+      <StatsTab />
+    </li>
+    <li>
+      <QuestsTab />
+    </li>
+    <li>
+      <MiscTab />
+    </li>
+    <li>
+      <RadioTab />
+    </li>
+  </ul>
 );
 
 export default Tabs;
