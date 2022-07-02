@@ -110,6 +110,75 @@ const Skills = () => {
   );
 };
 
+// Crafted
+const Crafted = () => {
+  return (
+    <div
+      class="tab-pane fade in active show"
+      show
+      id="crafted"
+      role="tabpanel"
+      aria-labelledby="skills-tab"
+    >
+      <div
+        id="carousel-crafted"
+        class="stats-page carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <div className="underlined-title d-flex align-items-center">
+              <h4 className="flex-grow-1">URAL </h4>
+              <div>
+                <a
+                  className="p-1"
+                  data-bs-target="#carousel-crafted"
+                  data-bs-slide="prev"
+                  role="button"
+                >
+                  {"<"}
+                </a>{" "}
+                <a
+                  className="p-1"
+                  data-bs-target="#carousel-crafted"
+                  data-bs-slide="next"
+                  role="button"
+                >
+                  {">"}
+                </a>
+              </div>
+            </div>
+            <div className="container mt-2">
+              <p>A state management library for Flutter</p>
+              <ol>
+                <li>
+                  Nano is a modular state management library with a strict
+                  architectural pattern
+                </li>
+                <li>Predictable, fully asynchronous, terse</li>
+              </ol>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <h4>Nano</h4>
+            <div className="container mt-2">
+              <p>A state management library for Flutter</p>
+              <ol>
+                <li>
+                  Nano is a modular state management library with a strict
+                  architectural pattern
+                </li>
+                <li>Predictable, fully asynchronous, terse</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+// --Crafted
+
 const StatsTabPanel = () => {
   const title = useRef();
   const stimpack = useRef();
@@ -148,7 +217,7 @@ const StatsTabPanel = () => {
           >
             <a>STACK</a>
           </li>
-          <li data-bs-toggle="tab" data-bs-target="#rad" role="tab">
+          <li data-bs-toggle="tab" data-bs-target="#crafted" role="tab">
             <a>CRAFTED</a>
           </li>
           <li data-bs-toggle="tab" data-bs-target="#eff" role="tab">
@@ -168,6 +237,7 @@ const StatsTabPanel = () => {
         </ul>
         <div class="tab-content">
           <Skills />
+          <Crafted />
         </div>
       </div>
     </div>
