@@ -5,6 +5,11 @@ import handyman_gif from "../../assets/gifs/handyman.gif";
 import nerd_gif from "../../assets/gifs/nerd.gif";
 import entertainer_gif from "../../assets/gifs/entertainer.gif";
 import { useState } from "preact/hooks";
+import {
+  MouseParallaxChild,
+  MouseParallaxContainer,
+} from "react-parallax-mouse";
+import MouseMoveEffect from "../MouseMoveEffect";
 
 const profiles = Object.freeze({
   vaultboy: "vaultboy",
@@ -308,7 +313,7 @@ const ItemsTabPanel = () => {
               name="radio"
               onChange={() => setProfile(profiles.fullstack)}
             />
-            <label for="radio1">Default</label>
+            <label for="radio1">Entrepreneur</label>
           </li>
           <li>
             <input
@@ -355,16 +360,20 @@ const ItemsTabPanel = () => {
             <a href="#">Mod</a>
           </div>
           <div class="info-body">
-            {
-              {
-                [profiles.fullstack]: <FullStackGif />,
-                [profiles.entertainer]: <EntertainerGif />,
-                [profiles.teamplayer]: <TeamPlayerGif />,
-                [profiles.handyman]: <HandymanGif />,
-                [profiles.nerd]: <NerdGif />,
-                [profiles.vaultboy]: <VaultBoyGif />,
-              }[activeProfile]
-            }
+            <MouseParallaxContainer>
+              <MouseParallaxChild factorX={0.1} factorY={0.1}>
+                {
+                  {
+                    [profiles.fullstack]: <FullStackGif />,
+                    [profiles.entertainer]: <EntertainerGif />,
+                    [profiles.teamplayer]: <TeamPlayerGif />,
+                    [profiles.handyman]: <HandymanGif />,
+                    [profiles.nerd]: <NerdGif />,
+                    [profiles.vaultboy]: <VaultBoyGif />,
+                  }[activeProfile]
+                }
+              </MouseParallaxChild>
+            </MouseParallaxContainer>
             {
               {
                 [profiles.fullstack]: <FullStackInfo />,
