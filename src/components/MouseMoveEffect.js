@@ -14,7 +14,13 @@ const MouseMoveEffect = ({
     const mouseY = event.pageY / window.innerHeight;
     const ydeg = mouseX * maxDegree - factorX * maxDegree;
     const xdeg = -factorY * (mouseY * maxDegree - factorY * maxDegree);
+    ref.current.style.transitionDelay = "0ms";
     ref.current.style.transform = `rotateY(${ydeg}deg) rotateX(${xdeg}deg)`;
+  };
+
+  const reset = () => {
+    ref.current.style.transitionDelay = "300ms";
+    ref.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
   };
 
   useEffect(() => {
@@ -27,10 +33,12 @@ const MouseMoveEffect = ({
     <div
       ref={ref}
       onMouseMove={eventListener}
+      onMouseLeave={reset}
       style={{
         perspective: 1000,
         transformStyle: "preserve-3d",
         transform: `rotateY(0deg) rotateX(0)`,
+        transitionProperty: "transform",
       }}
     >
       {children}
