@@ -126,7 +126,7 @@ const QuestContent = ({ id, questData = data.QuestsTabPanel[0], isFirst }) => {
   return (
     <div
       class={
-        isFirst ? "info tab-pane fade-in active show" : "info tab-pane fade-in "
+        isFirst ? "info tab-pane fade  active show" : "info tab-pane fade "
       }
       id={id}
       role="tabpanel"
@@ -195,6 +195,37 @@ const QuestContent = ({ id, questData = data.QuestsTabPanel[0], isFirst }) => {
   );
 };
 
+const SideQuest = () => (
+  <div
+    class="info tab-pane fade"
+    id="side-quests"
+    role="tabpanel"
+    aria-labelledby="side-quests-tab"
+  >
+    <div class="post">
+      <div className="underlined-title">
+        <h4>Kibibyte</h4>
+        <span></span>
+      </div>
+      <p>Duration: 2017 - PRESENT</p>
+      <ol>
+        <li>
+          Building niche tools as an Indie hacker and trying to bootstrap a
+          startup of my own
+        </li>
+        <li>
+          A freelance developer, ready take on small, simple, complex gigs and
+          helping small businesses get a launch their product.
+        </li>
+      </ol>
+      <p style={{ fontSize: 10, textAlign: "center" }}>
+        As a passionate programmer I'm always curious to learn more. <br />I
+        like to work on meaningful and interesting projects.
+      </p>
+    </div>
+  </div>
+);
+
 const QuestsTabPanel = ({ content = data.QuestsTabPanel }) => {
   return (
     <div
@@ -219,6 +250,12 @@ const QuestsTabPanel = ({ content = data.QuestsTabPanel }) => {
           <li class="disabled">
             <label>//Null</label>
           </li>
+          <li class="disabled">
+            <label>//Null</label>
+          </li>
+          <li data-bs-toggle="tab" data-bs-target="#side-quests" role="tab">
+            <a>Side Quests</a>
+          </li>
         </ul>
         <div class="tab-content">
           {allQuests.map((quest, i) => (
@@ -228,16 +265,7 @@ const QuestsTabPanel = ({ content = data.QuestsTabPanel }) => {
               isFirst={i === 0}
             />
           ))}
-          <div
-            class="info tab-pane fade"
-            id="quest-2"
-            role="tabpanel"
-            aria-labelledby="quest-2-tab"
-          >
-            <div class="post">
-              <p>Fallput: Battle Royale</p>
-            </div>
-          </div>
+          <SideQuest />
         </div>
       </div>
     </div>
