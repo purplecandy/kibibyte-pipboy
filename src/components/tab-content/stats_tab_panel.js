@@ -113,9 +113,7 @@ const Skills = () => {
       aria-labelledby="skills-tab"
     >
       <div class="stats-page">
-        <h4>STACK</h4>
-
-        <div className="d-flex mt-2 justify-content-evenly">
+        <div className="underlined-title d-flex mt-2 justify-content-evenly">
           {allGroups.map(([groupType, groupName]) => (
             <a
               className="mr-2 p-2"
@@ -190,11 +188,11 @@ const CraftedItem = ({ title, description, pointers, link, isFirst }) => (
 const Crafted = ({ data = content.Crafted }) => {
   return (
     <div
-      class="tab-pane fade in active show"
+      class="tab-pane fade in"
       show
       id="crafted"
       role="tabpanel"
-      aria-labelledby="skills-tab"
+      aria-labelledby="crafted-tab"
     >
       <div
         id="carousel-crafted"
