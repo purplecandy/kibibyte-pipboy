@@ -1,4 +1,6 @@
+import { Carousel } from "bootstrap";
 import { useEffect, useRef, useState } from "preact/hooks";
+import OpenLink from "../OpenLink";
 
 const groups = Object.freeze({
   none: "none",
@@ -38,6 +40,39 @@ const groupTagsMap = Object.freeze({
 });
 
 const groupTags = Object.entries(groupTagsMap);
+
+const content = {
+  Crafted: [
+    {
+      title: "Ural",
+      description: "A screenshot organizer with machine learning",
+      link: "https://github.com/purplecandy/ural/tree/master/flutter",
+      pointers: [
+        "A screenshot organizer that finds your screenshot by its contents.",
+        "You can search for the screenshot by describing it like bank statement, amazon, hand bang",
+        "Effectively performing OCR in the background and caching to SQLite",
+      ],
+    },
+    {
+      title: "Nano",
+      description: "A state management library for Flutter",
+      link: "https://flutter-nano.surge.sh/",
+      pointers: [
+        "Nano is a modular state management library with a strict architectural pattern",
+        "Predictable, fully asynchronous, terse",
+        "Nano is an evolution of all my own state management tools built ever since Flutter was in Alpha.",
+      ],
+    },
+    {
+      title: "Kibibyte Drive",
+      description: "A microservice for cloning drive files",
+      link: "https://github.com/purplecandy/kibibytedrive",
+      pointers: [
+        "A simple tool developed with React and Node for quickly cloning files between drive accounts",
+      ],
+    },
+  ],
+};
 
 const SkillTag = ({ activeGroup, groupName, group = [] }) => {
   if (activeGroup === groupName)
@@ -110,8 +145,49 @@ const Skills = () => {
   );
 };
 
+const CraftedItem = ({ title, description, pointers, link, isFirst }) => (
+  <div className={isFirst ? "carousel-item active" : "carousel-item"}>
+    <div className="underlined-title d-flex align-items-center">
+      <h4 className="flex-grow-1">
+        {title.toUpperCase()}{" "}
+        <span>
+          <a>
+            <OpenLink url={link} />
+          </a>
+        </span>
+      </h4>
+      <div>
+        <a
+          className="p-1"
+          data-bs-target="#carousel-crafted"
+          data-bs-slide="prev"
+          role="button"
+        >
+          {"<"}
+        </a>{" "}
+        <a
+          className="p-1"
+          data-bs-target="#carousel-crafted"
+          data-bs-slide="next"
+          role="button"
+        >
+          {">"}
+        </a>
+      </div>
+    </div>
+    <div className="container mt-2">
+      <p>{description}</p>
+      <ol>
+        {pointers.map((pointer, i) => (
+          <li key={i}>{pointer}</li>
+        ))}
+      </ol>
+    </div>
+  </div>
+);
+
 // Crafted
-const Crafted = () => {
+const Crafted = ({ data = content.Crafted }) => {
   return (
     <div
       class="tab-pane fade in active show"
@@ -122,56 +198,13 @@ const Crafted = () => {
     >
       <div
         id="carousel-crafted"
-        class="stats-page carousel slide carousel-fade"
+        class="stats-page carousel slide"
         data-bs-ride="carousel"
       >
         <div className="carousel-inner">
-          <div className="carousel-item active">
-            <div className="underlined-title d-flex align-items-center">
-              <h4 className="flex-grow-1">URAL </h4>
-              <div>
-                <a
-                  className="p-1"
-                  data-bs-target="#carousel-crafted"
-                  data-bs-slide="prev"
-                  role="button"
-                >
-                  {"<"}
-                </a>{" "}
-                <a
-                  className="p-1"
-                  data-bs-target="#carousel-crafted"
-                  data-bs-slide="next"
-                  role="button"
-                >
-                  {">"}
-                </a>
-              </div>
-            </div>
-            <div className="container mt-2">
-              <p>A state management library for Flutter</p>
-              <ol>
-                <li>
-                  Nano is a modular state management library with a strict
-                  architectural pattern
-                </li>
-                <li>Predictable, fully asynchronous, terse</li>
-              </ol>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <h4>Nano</h4>
-            <div className="container mt-2">
-              <p>A state management library for Flutter</p>
-              <ol>
-                <li>
-                  Nano is a modular state management library with a strict
-                  architectural pattern
-                </li>
-                <li>Predictable, fully asynchronous, terse</li>
-              </ol>
-            </div>
-          </div>
+          {data.map((e, i) => (
+            <CraftedItem key={i} isFirst={i === 0} {...e} />
+          ))}
         </div>
       </div>
     </div>
