@@ -4,6 +4,26 @@ import OpenLink from "../OpenLink";
 const data = {
   QuestsTabPanel: [
     {
+      title: "Sprinto",
+      location: "Remote",
+      status: "ACTIVE",
+      position: "Full Stack Engineer",
+      promotions: [],
+      duration: "JUN 2022 - PRESENT",
+      showcase: [
+        {
+          url: "https://sprinto.com/",
+          name: "Sprinto",
+        },
+      ],
+      pointers: [
+        "Solving exciting problems in the compliance domain and contributing to build a more impactful product at Sprinto",
+      ],
+      images: [
+        "https://res.cloudinary.com/kibibyte/image/upload/v1656879817/sprinto_llkby6.png",
+      ],
+    },
+    {
       title: "X Billion Skills Lab",
       location: "Mumbai",
       status: "Completed",
@@ -40,6 +60,56 @@ const data = {
       images: [
         "https://res.cloudinary.com/kibibyte/image/upload/v1656872517/xbsl_screen_1_jifx5q.png",
         "https://res.cloudinary.com/kibibyte/image/upload/v1656872517/xbsl_screen_2_gpeas6.webp",
+      ],
+    },
+    {
+      title: "Techimax - SkillLauncher",
+      location: "Remote",
+      status: "Completed",
+      position: "Full Stack Developer",
+      promotions: [],
+      duration: "MAY 2020 - JUL 2020",
+      showcase: [
+        {
+          url: "https://skilllauncher.com/",
+          name: "Skill Launcher",
+        },
+      ],
+      pointers: [
+        "Tasked to design and develop SkillLauncher (E-Learning Platform) in a severe deadline",
+        "Re-wrote certain core parts to optimize the pipeline and increase performance.",
+        "Helped other developers adopt better development practices and technologies.",
+        "Praised for the design choices",
+        "Worked with Flutter, NodeJS, and integrated tools such as FCM, Razorpay, HLS(Live Video), and a redesigned video player with quality controls from scratch.",
+      ],
+      images: [
+        "https://res.cloudinary.com/kibibyte/image/upload/v1656878463/Skill_Launcher_ek7gha.jpg",
+        "https://res.cloudinary.com/kibibyte/image/upload/v1656878549/skill_launcher_2_is94ye.jpg",
+      ],
+    },
+    {
+      title: "HHC",
+      location: "Remote",
+      status: "Completed",
+      position: "Web Developer",
+      promotions: [],
+      duration: "AUG 2020 - DEC 2020",
+      showcase: [
+        {
+          url: "https://hasanhairclub.com/",
+          name: "HHC",
+        },
+      ],
+      pointers: [
+        "Tasked to take a popular business in Banglore to get it's online presence and automate the processes",
+        "It was a short gig but with a lot of learning about a completely different sector and user-base",
+        "Designed the frontend to a more modern and elegant look that has seen an improved conversation rate by 35%",
+        "Achieved better user engagement and higher search rankings than competitors established more than 5 ago",
+        "Worked with Django to build a customized appointment scheduling and order management system to power internal process",
+      ],
+      images: [
+        "https://res.cloudinary.com/kibibyte/image/upload/v1656878965/hhc_2_n2mkzz.png",
+        "https://res.cloudinary.com/kibibyte/image/upload/v1656879098/hhc_1_m1aazl.png",
       ],
     },
   ],
