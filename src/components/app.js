@@ -7,8 +7,10 @@ const App = () => {
 
   return (
     <div>
-      <Interface />
-      {/* {isAgreed ? <Interface /> : <Terminal onAgree={() => setAgree(true)} />} */}
+      <Terminal onAgree={() => setAgree(true)} />
+      <Interface zIndex={isAgreed ? 0 : -4} />
+      {/* <Interface /> */}
+      {/* {isAgreed ? <Interface /> :} */}
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "preact/hooks";
 import Tabs from "../../components/tabs";
 import TabContent from "../../components/tab-content";
 
-const Interface = () => {
+const Interface = ({ display, zIndex }) => {
   // const [dots, setDots] = useState([new Dot()]);
   const cursor = useRef();
 
@@ -34,7 +34,7 @@ const Interface = () => {
   }, []);
 
   return (
-    <div className="bbody">
+    <div className="bbody" style={{ zIndex, display }}>
       <div id="frame" className="frame">
         <div className="piece output container">
           <div className="pipboy">

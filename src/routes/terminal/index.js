@@ -1,7 +1,7 @@
 import styles from "./style.css";
 
-const Terminal = ({ onAgree }) => (
-  <div className={styles.hhtml}>
+const Terminal = ({ onAgree, zIndex, display }) => (
+  <div className={styles.hhtml} style={{ zIndex: zIndex, display }}>
     <div class={`${styles.bbody} ${styles.noisy}`}>
       <div class={styles.emblem}>
         <span class={styles["icon-information"]}></span>
