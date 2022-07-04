@@ -46,7 +46,7 @@ const Interface = ({ display, zIndex }) => {
         </div>
         <div ref={cursor} className="cursor">
           <img
-            src="https://cybersandbox.ca/resources/nv-cursor.png"
+            src="https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png"
             height={28}
           />
         </div>

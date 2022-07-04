@@ -721,19 +721,19 @@ a:hover {
 }
 
 .cursor.cursor-default::before {
-  background-image: url("https://cybersandbox.ca/resources/nv-cursor.png");
+  background-image: url("https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png");
   -webkit-filter: brightness(0.8);
   filter: brightness(0.8);
 }
 
 .cursor.cursor-input::before {
-  background-image: url("https://cybersandbox.ca/resources/nv-cur-text.png");
+  background-image: url("https://res.cloudinary.com/kibibyte/image/upload/v1656953792/nv-cur-text_jidfto.png");
   -webkit-filter: brightness(0.8);
   filter: brightness(0.8);
 }
 
 .cursor.cursor-active::before {
-  background-image: url("https://cybersandbox.ca/resources/nv-cursor.png");
+  background-image: url("https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png");
   -webkit-filter: brightness(1.15) saturate(1.15);
   filter: brightness(1.15) saturate(1.15);
 }
@@ -889,7 +889,7 @@ a:hover {
     bottom: 16px;
   }
   .cursor.cursor-active::before {
-    background-image: url("https://cybersandbox.ca/resources/nv-cursor.png");
+    background-image: url("https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png");
     -webkit-filter: brightness(1);
     filter: brightness(1);
   }
@@ -963,7 +963,7 @@ html.black {
 
 .black .piece::before {
   content: '';
-  background-image: url('https://cybersandbox.ca/wp-content/uploads/2021/11/the-eye.gif');
+  background-image: url('https://res.cloudinary.com/kibibyte/image/upload/v1656953877/the-eye_vjucmz.gif');
   background-size: 110vmax auto;
   opacity: 0.8;
   height: 100%;
@@ -974,7 +974,7 @@ html.black {
 
 .black .piece::after {
   content: '';
-  background-image: url('https://cybersandbox.ca/wp-content/uploads/2021/11/b-noise.gif');
+  background-image: url('https://res.cloudinary.com/kibibyte/image/upload/v1656953886/b-noise_miyuxy.gif');
   opacity: 0.05;
   height: 100%;
   top: 0;
