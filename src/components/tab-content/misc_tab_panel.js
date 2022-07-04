@@ -1,3 +1,5 @@
+import SnakeGame from "../snake-game";
+
 const MiscTabPanel = () => {
   const getColor = (colorType) => {
     const r = document.querySelector(":root");
@@ -27,6 +29,9 @@ const MiscTabPanel = () => {
           </li>
           <li data-bs-toggle="tab" data-bs-target="#misc-3" role="tab">
             <a>Why do we use it?</a>
+          </li>
+          <li data-bs-toggle="tab" data-bs-target="#snake-game" role="tab">
+            <a>Snake Game</a>
           </li>
         </ul>
         <div class="tab-content">
@@ -144,6 +149,15 @@ const MiscTabPanel = () => {
                 accident, sometimes on purpose (injected humour and the like).
               </p>
             </div>
+          </div>
+
+          <div
+            class="info tab-pane fade"
+            id="snake-game"
+            role="tabpanel"
+            aria-labelledby="snake-game-tab"
+          >
+            <SnakeGame />
           </div>
         </div>
       </div>
