@@ -15,17 +15,17 @@ const App = () => {
 
   const playSound = (type) => {
     const ref = soundRefs.current[type];
-    console.log("Refs", { soundRefs });
+    // console.log("Refs", { soundRefs });
     if (!ref) console.error("Invalid sound type defined");
     ref.current.play();
   };
 
   const onClickListener = (event) => {
     const attributes = Object.values(event.target.attributes);
-    console.log("Click event", { attributes });
+    // console.log("Click event", { attributes });
     const dataPlaySound = attributes.find((e) => e.name === "data-play-sound");
     if (dataPlaySound) {
-      console.log("Play the sound");
+      // console.log("Play the sound");
       playSound(dataPlaySound.value);
     }
   };
