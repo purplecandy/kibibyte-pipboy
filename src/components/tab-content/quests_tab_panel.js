@@ -1,5 +1,6 @@
 import MouseMoveEffect from "../MouseMoveEffect";
 import OpenLink from "../OpenLink";
+import { soundTypes } from "../../utils";
 
 const data = {
   QuestsTabPanel: [
@@ -244,7 +245,7 @@ const QuestsTabPanel = ({ content = data.QuestsTabPanel }) => {
               data-bs-target={`#${quest.id}`}
               role="tab"
             >
-              <a>{quest.data.title}</a>
+              <a data-play-sound={soundTypes.slide_click}>{quest.data.title}</a>
             </li>
           ))}
           <li class="disabled">
@@ -254,7 +255,7 @@ const QuestsTabPanel = ({ content = data.QuestsTabPanel }) => {
             <label>//Null</label>
           </li>
           <li data-bs-toggle="tab" data-bs-target="#side-quests" role="tab">
-            <a>Side Quests</a>
+            <a data-play-sound={soundTypes.slide_click}>Side Quests</a>
           </li>
         </ul>
         <div class="tab-content">

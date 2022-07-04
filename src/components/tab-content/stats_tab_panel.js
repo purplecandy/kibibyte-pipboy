@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "preact/hooks";
+import { soundTypes } from "../../utils";
 import OpenLink from "../OpenLink";
 
 const groups = Object.freeze({
@@ -245,13 +246,13 @@ const StatsTabPanel = () => {
             data-bs-target="#skills"
             role="tab"
           >
-            <a>STACK</a>
+            <a data-play-sound={soundTypes.slide_click}>STACK</a>
           </li>
           <li data-bs-toggle="tab" data-bs-target="#crafted" role="tab">
-            <a>CRAFTED</a>
+            <a data-play-sound={soundTypes.slide_click}>CRAFTED</a>
           </li>
           <li data-bs-toggle="tab" data-bs-target="#eff" role="tab">
-            <a>EFF</a>
+            <a data-play-sound={soundTypes.slide_click}>EFF</a>
           </li>
           <li class="disabled">
             <a href="#">H20</a>
