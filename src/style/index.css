@@ -101,8 +101,8 @@ b, strong {
 }
 
 .output {
-  -webkit-animation: crt-output 10ms infinite;
-  animation: crt-output 10ms infinite;
+  /* -webkit-animation: crt-output 10ms infinite;
+  animation: crt-output 10ms infinite; */
   background-color: var(--black);
   position: absolute;
   padding: 30px;
