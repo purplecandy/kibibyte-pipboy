@@ -1,4 +1,3 @@
-import { Carousel } from "bootstrap";
 import { useEffect, useRef, useState } from "preact/hooks";
 import OpenLink from "../OpenLink";
 

@@ -10,6 +10,7 @@ import {
   MouseParallaxContainer,
 } from "react-parallax-mouse";
 import MouseMoveEffect from "../MouseMoveEffect";
+import { soundTypes } from "../../utils";
 
 const profiles = Object.freeze({
   vaultboy: "vaultboy",
@@ -274,7 +275,7 @@ const HandymanInfo = () => (
   </div>
 );
 
-const ItemsTabPanel = () => {
+const ItemsTabPanel = ({ onClick }) => {
   const [activeProfile, setProfile] = useState(profiles.vaultboy);
 
   return (
@@ -312,6 +313,7 @@ const ItemsTabPanel = () => {
               id="radio1"
               name="radio"
               onChange={() => setProfile(profiles.fullstack)}
+              data-play-sound={soundTypes.slide_click}
             />
             <label for="radio1">Entrepreneur</label>
           </li>
@@ -321,6 +323,7 @@ const ItemsTabPanel = () => {
               id="radio2"
               name="radio"
               onChange={() => setProfile(profiles.entertainer)}
+              data-play-sound={soundTypes.slide_click}
             />
             <label for="radio2">Entertainer</label>
           </li>
@@ -330,6 +333,7 @@ const ItemsTabPanel = () => {
               id="radio3"
               name="radio"
               onChange={() => setProfile(profiles.teamplayer)}
+              data-play-sound={soundTypes.slide_click}
             />
             <label for="radio3">Team Player</label>
           </li>
@@ -339,6 +343,7 @@ const ItemsTabPanel = () => {
               id="radio4"
               name="radio"
               onChange={() => setProfile(profiles.handyman)}
+              data-play-sound={soundTypes.slide_click}
             />
             <label for="radio4">Problem Solver</label>
           </li>
@@ -348,6 +353,7 @@ const ItemsTabPanel = () => {
               id="radio5"
               name="radio"
               onClick={() => setProfile(profiles.nerd)}
+              data-play-sound={soundTypes.slide_click}
             />
             <label for="radio5">Nerd</label>
           </li>
