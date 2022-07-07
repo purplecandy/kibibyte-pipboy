@@ -1,4 +1,4 @@
-import ItemsTab from "./items_tab";
+import ProfilesTab from "./profiles_tab";
 import MiscTab from "./misc_tab";
 import QuestsTab from "./quests_tab";
 import RadioTab from "./radio_tab";
@@ -9,7 +9,7 @@ const Tabs = () => {
     <div>
       <ul class="pip-foot" role="tablist">
         <li>
-          <ItemsTab />
+          <ProfilesTab />
         </li>
         <li>
           <StatsTab />

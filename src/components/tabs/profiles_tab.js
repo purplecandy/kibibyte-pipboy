@@ -1,12 +1,12 @@
 import { soundTypes } from "../../utils";
 
-const ItemsTab = () => (
+const ProfilesTab = () => (
   <a
     class="active"
-    href="#items"
+    href="#profiles"
     aria-current="page"
     data-bs-toggle="tab"
-    data-bs-target="#items"
+    data-bs-target="#profiles"
     role="tab"
     aria-selected="true"
     data-play-sound={soundTypes.scifi_click}
@@ -15,4 +15,4 @@ const ItemsTab = () => (
   </a>
 );
 
-export default ItemsTab;
+export default ProfilesTab;

@@ -275,15 +275,15 @@ const HandymanInfo = () => (
   </div>
 );
 
-const ItemsTabPanel = ({ onClick }) => {
+const ProfilesTabPanel = ({ onClick }) => {
   const [activeProfile, setProfile] = useState(profiles.vaultboy);
 
   return (
     <div
       class="tab-pane fade show active"
       role="tabpanel"
-      id="items"
-      aria-labelledby="items-tab"
+      id="profiles"
+      aria-labelledby="profiles-tab"
     >
       <h3 class="pip-title">Profiles</h3>
       <ul class="pip-head">
@@ -396,4 +396,4 @@ const ItemsTabPanel = ({ onClick }) => {
     </div>
   );
 };
-export default ItemsTabPanel;
+export default ProfilesTabPanel;
