@@ -22,11 +22,14 @@ export const draw = (CTX, food) => {
 };
 
 export const spawn = (snake, food) => {
+  // console.log("Food ", food);
+  // console.log("Snake ", food);
+  // if (!food) food = create();
   let randX = ~~(Math.random() * cells) * food.size;
   let randY = ~~(Math.random() * cells) * food.size;
   for (let path of snake.history) {
     if (helpers.isCollision(new helpers.Vec(randX, randY), path)) {
-      return spawn();
+      return spawn(snake, food);
     }
   }
   food.color = `hsl(${helpers.randHue()}, 100%, 50%)`;
