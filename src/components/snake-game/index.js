@@ -41,7 +41,12 @@ const _SnakeGame = () => {
 
   //Getters
 
-  const getCTX = () => canvasRef.current.getContext("2d");
+  const getCTX = () => canvasRef.current?.getContext("2d");
+
+  const printDebugLogs = () => {
+    // console.log("Refs - ", { canvasRef, gameStateRef });
+    console.log("Game state - ", { ...gameState });
+  };
 
   //Listeners
 
@@ -107,9 +112,12 @@ const _SnakeGame = () => {
     getCTX().clearRect(0, 0, W, H);
   };
 
+  let loopCount = 0;
   const loop = () => {
-    clear();
+    // console.log("Loop Count - ", loopCount++);
+
     if (!gameState.isGameOver) {
+      clear();
       gameState.requestID = setTimeout(loop, 1000 / 60);
       helpers.drawGrid(getCTX(), cells, W, H);
       Snake.update(
@@ -131,7 +139,7 @@ const _SnakeGame = () => {
         Particle.update(getCTX(), particle)
       );
       helpers.garbageCollector(gameState.particles);
-      console.log("Game state", gameState);
+      // printDebugLogs();
     } else {
       clear();
       gameOver(getCTX(), gameState.maxScore, gameState.score);
@@ -170,16 +178,16 @@ const _SnakeGame = () => {
   return (
     <div class={`${styles.container} ${styles.noselect}`}>
       <div class={styles.wrapper}>
-        <button id={styles.replay} onClick={reset}>
+        {/* <button id={styles.replay} onClick={reset}>
           <i class="fas fa-play"></i>
           RESTART
-        </button>
+        </button> */}
         <div id="canvas">
           <canvas ref={canvasRef}></canvas>
         </div>
         <div id="ui">
           <h2>SCORE</h2>
-          <span id="score">00</span>
+          <span id="score">{scoreBoard}</span>
         </div>
       </div>
     </div>

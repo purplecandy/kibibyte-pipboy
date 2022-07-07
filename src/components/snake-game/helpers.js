@@ -33,7 +33,8 @@ export const helpers = {
   },
   drawGrid(CTX, cells, W, H) {
     CTX.lineWidth = 1.1;
-    CTX.strokeStyle = "#232332";
+    // CTX.strokeStyle = "#232332";
+    // CTX.strokeStyle = "rgb(245,245,245)";
     CTX.shadowBlur = 0;
     for (let i = 1; i < cells; i++) {
       let f = (W / cells) * i;
