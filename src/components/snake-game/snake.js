@@ -108,3 +108,35 @@ export const update = (CTX, key, snake, food, onSuccess, onFail) => {
     }
   }
 };
+
+export const autoPlay = (CTX, snake, food, onSuccess, onFail) => {
+  let key = {
+    ArrowUp: false,
+    ArrowRight: false,
+    ArrowDown: false,
+    ArrowLeft: false,
+  };
+
+  const last = snake.last;
+  console.log("Last", last);
+
+  if (last !== "ArrowRight") key.ArrowLeft = snake.pos.x > food.pos.x;
+  if (last !== "ArrowLeft") key.ArrowRight = snake.pos.x < food.pos.x;
+
+  if (snake.pos.x === food.pos.x) {
+    if (last !== "ArrowDown") key.ArrowUp = snake.pos.y > food.pos.y;
+    if (last !== "ArrowUp") key.ArrowDown = snake.pos.y < food.pos.y;
+  }
+
+  ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].forEach((type) => {
+    if (key[type]) snake.last = type;
+  });
+
+  console.log(
+    "Key stroke",
+    Object.entries(key)
+      .filter(([k, v]) => v)
+      .map(([k]) => k)
+  );
+  update(CTX, key, snake, food, onSuccess, onFail);
+};
