@@ -64,7 +64,7 @@ const data = {
       ],
     },
     {
-      title: "Techimax - SkillLauncher",
+      title: "SkillLauncher",
       location: "Remote",
       status: "Completed",
       position: "Full Stack Developer",
@@ -89,6 +89,7 @@ const data = {
       ],
     },
     {
+      hidden: true,
       title: "HHC",
       location: "Remote",
       status: "Completed",
@@ -118,10 +119,12 @@ const data = {
 
 const getTitleId = (title = "") => title.split(" ").join("_").toLowerCase();
 
-const allQuests = data.QuestsTabPanel.map((e) => ({
-  id: getTitleId(e.title),
-  data: e,
-}));
+const allQuests = data.QuestsTabPanel.filter((e) => e.hidden !== true).map(
+  (e) => ({
+    id: getTitleId(e.title),
+    data: e,
+  })
+);
 
 const QuestContent = ({ id, questData = data.QuestsTabPanel[0], isFirst }) => {
   return (
@@ -214,6 +217,7 @@ const SideQuest = () => (
           Building niche tools as an Indie hacker and trying to bootstrap a
           startup of my own
         </li>
+        <li>Open-source contribution because I love FOSS.</li>
         <li>
           A freelance developer, ready take on small, simple, complex gigs and
           helping small businesses get a launch their product.
