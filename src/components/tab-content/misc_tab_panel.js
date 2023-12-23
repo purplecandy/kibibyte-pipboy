@@ -1,5 +1,3 @@
-import SnakeGame from "../snake-game";
-
 const MiscTabPanel = () => {
   const getColor = (colorType) => {
     const r = document.querySelector(":root");
@@ -25,13 +23,16 @@ const MiscTabPanel = () => {
             <a>Backlight Color</a>
           </li>
           <li data-bs-toggle="tab" data-bs-target="#misc-2" role="tab">
-            <a>Where does it come from?</a>
+            <a>Now she's gone</a>
           </li>
           <li data-bs-toggle="tab" data-bs-target="#misc-3" role="tab">
-            <a>Why do we use it?</a>
+            <a>Memory</a>
           </li>
-          <li data-bs-toggle="tab" data-bs-target="#snake-game" role="tab">
-            <a>Snake Game</a>
+          <li data-bs-toggle="tab" data-bs-target="#misc-4" role="tab">
+            <a>Irresistible</a>
+          </li>
+          <li data-bs-toggle="tab" data-bs-target="#misc-5" role="tab">
+            <a>Dreams</a>
           </li>
         </ul>
         <div class="tab-content">
@@ -105,26 +106,45 @@ const MiscTabPanel = () => {
           >
             <div class="post">
               <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature from
-                45 BC, making it over 2000 years old. Richard McClintock, a
-                Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in
-                classical literature, discovered the undoubtable source. Lorem
-                Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
-                written in 45 BC. This book is a treatise on the theory of
-                ethics, very popular during the Renaissance. The first line of
-                Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line
-                in section 1.10.32.
-              </p>
-              <p>
-                The standard chunk of Lorem Ipsum used since the 1500s is
-                reproduced below for those interested. Sections 1.10.32 and
-                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                reproduced in their exact original form, accompanied by English
-                versions from the 1914 translation by H. Rackham.
+                You wanted to be my bestie <br />
+                I cried on your shoulder
+                <br />
+                <br />
+                We laughed
+                <br />
+                We enjoyed
+                <br />
+                We stayed up late
+                <br />
+                <br />
+                We walked on a different path
+                <br />
+                But promised to watch each other's back
+                <br />
+                It's only been a few months
+                <br />
+                <br />
+                But you do not talk anymore...like a stranger
+                <br />
+                Are we speaking a different tounge?
+                <br />
+                You said it hurts when you see me hurt
+                <br />
+                Do we still have that connection?
+                <br />
+                Do you miss me as I miss you?
+                <br />
+                <br />
+                I'm looking for you in these fading memories
+                <br />
+                When you see this I want you to just look back
+                <br />
+                <br />
+                I wish it's just the wind <br />
+                flowing in different directions
+                <br />
+                and these letters reach out to you one day
+                <br />
               </p>
             </div>
           </div>
@@ -136,28 +156,46 @@ const MiscTabPanel = () => {
             aria-labelledby="misc-3-tab"
           >
             <div class="post">
+              <p>For you my brain remembers every little detail </p>
               <p>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content
-                here, content here', making it look like readable English. Many
-                desktop publishing packages and web page editors now use Lorem
-                Ipsum as their default model text, and a search for 'lorem
-                ipsum' will uncover many web sites still in their infancy.
-                Various versions have evolved over the years, sometimes by
-                accident, sometimes on purpose (injected humour and the like).
+                DATA CORRUPTED... <br />
+                ##$%&'()*+,-./:;=?@[\]^_`|~ <br />
+                ERROR! ERROR! ERR0R! 1N#0RM^T10N N0T F0UND <br />
+                FILE NOT FOUND. PLEASE CONTACT AN ADMINISTRATOR. <br />
+                [DATA EXPUNGED]
+                <br /> [REDACTED]
+                <br /> ACCESS DENIED...
               </p>
             </div>
           </div>
-
           <div
             class="info tab-pane fade"
-            id="snake-game"
+            id="misc-4"
             role="tabpanel"
-            aria-labelledby="snake-game-tab"
+            aria-labelledby="misc-4-tab"
           >
-            <SnakeGame />
+            <div class="post">
+              <p>
+                You’re magic. You shine.
+                <br />
+                You’re a starry night in a field miles and miles away from the
+                city lights.
+                <br />
+                It’s no wonder everyone is drawn to you.
+                <br />I tried to resist and was pulled into your orbit like all
+                the others.
+              </p>
+            </div>
+          </div>
+          <div
+            class="info tab-pane fade"
+            id="misc-5"
+            role="tabpanel"
+            aria-labelledby="misc-5-tab"
+          >
+            <div class="post">
+              <p>In the end the dreams remained dreams </p>
+            </div>
           </div>
         </div>
       </div>

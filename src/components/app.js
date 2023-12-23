@@ -37,7 +37,7 @@ const App = () => {
     const audioEffectType = attributes.find(
       (e) => e.name === "data-play-sound" || e.name === "data-play-audio"
     );
-
+    if (!audioEffectType) return;
     if (audioEffectType.name === "data-play-sound") {
       // console.log("Play the sound");
       playSound(audioEffectType.value);
