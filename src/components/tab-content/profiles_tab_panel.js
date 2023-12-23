@@ -11,6 +11,7 @@ import {
 } from "react-parallax-mouse";
 import MouseMoveEffect from "../MouseMoveEffect";
 import { soundTypes } from "../../utils";
+import SnakeGame from "../snake-game";
 
 const profiles = Object.freeze({
   vaultboy: "vaultboy",
@@ -274,6 +275,15 @@ const HandymanInfo = () => (
 
 const ProfilesTabPanel = ({ onClick }) => {
   const [activeProfile, setProfile] = useState(profiles.vaultboy);
+  const [isPlaying, setPlaying] = useState(false);
+
+  const playOrStopGame = () => {
+    if (isPlaying) {
+      setPlaying(false);
+    } else {
+      setPlaying(true);
+    }
+  };
 
   return (
     <div
@@ -302,8 +312,20 @@ const ProfilesTabPanel = ({ onClick }) => {
           <b>Caps</b> 1721
         </li>
       </ul>
+
       <div class="pip-body">
-        <ul class="options">
+        <div class="gamePlayControl">
+          <div class="right-options" onClick={playOrStopGame}>
+            <a
+              href="#"
+              className={activeProfile === profiles.vaultboy && "disabled"}
+            >
+              {isPlaying ? "Stop" : "Play"}
+            </a>
+          </div>
+        </div>
+        <SnakeGame isMounted={isPlaying} />
+        <ul class="options" style={{ display: isPlaying ? "none" : "block" }}>
           <li>
             <input
               type="radio"
@@ -356,13 +378,12 @@ const ProfilesTabPanel = ({ onClick }) => {
           </li>
         </ul>
         <div class="info">
-          <div class="right-options">
-            <a href="#" class="disabled">
-              Maintain
-            </a>
-            <a href="#">Mod</a>
-          </div>
-          <div class="info-body">
+          <div
+            class="info-body"
+            style={{
+              display: isPlaying ? "none" : "block",
+            }}
+          >
             <MouseParallaxContainer>
               <MouseParallaxChild factorX={0.1} factorY={0.1}>
                 {

@@ -178,36 +178,20 @@ const _SnakeGame = () => {
   return (
     <div class={`${styles.container} ${styles.noselect}`}>
       <div class={styles.wrapper}>
-        {/* <button id={styles.replay} onClick={reset}>
-          <i class="fas fa-play"></i>
-          RESTART
-        </button> */}
-        <div id="canvas">
-          <canvas ref={canvasRef}></canvas>
-        </div>
         <div id="ui">
           <h2>SCORE</h2>
           <span id="score">{scoreBoard}</span>
+        </div>
+        <div id="canvas">
+          <canvas ref={canvasRef}></canvas>
         </div>
       </div>
     </div>
   );
 };
 
-const SnakeGame = () => {
-  const [isMounted, setGameMount] = useState(false);
-  return (
-    <>
-      <a
-        onClick={() => {
-          setGameMount(!isMounted);
-        }}
-      >
-        {!isMounted ? "Play" : "Stop"}
-      </a>
-      {isMounted && <_SnakeGame />}
-    </>
-  );
+const SnakeGame = ({ isMounted }) => {
+  return <>{isMounted && <_SnakeGame />}</>;
 };
 
 export default SnakeGame;
