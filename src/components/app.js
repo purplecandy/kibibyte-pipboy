@@ -54,7 +54,15 @@ const App = () => {
 
   return (
     <div>
-      {/* <Terminal onAgree={() => setAgree(true)} /> */}
+      <a
+        class="github-fork-ribbon"
+        href="https://github.com/purplecandy/kibibyte-pipboy"
+        data-ribbon="Fork me on GitHub"
+        title="Fork me on GitHub"
+      >
+        Checkout on GitHub
+      </a>
+      <Terminal onAgree={() => setAgree(true)} />
       <Interface zIndex={isAgreed ? 0 : -4} />
       {/* <Interface /> */}
       {/* {isAgreed ? <Interface /> :} */}
