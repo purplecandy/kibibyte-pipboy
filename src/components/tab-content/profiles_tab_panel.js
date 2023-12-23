@@ -111,15 +111,15 @@ const FullStackInfo = () => (
       <li class="vboy-wrap"></li>
       <li class="clear">
         <span class="fade-a">
-          <b>DAM</b> 52
+          <b>Indie Hacks</b> 4
         </span>
         <span class="fade-b">
-          <b>DPS</b>
-          49.3
+          <b>Ideas</b>
+          72
         </span>
       </li>
       <li>
-        <b>WG</b> 6.00
+        <b>Connections</b> 38
       </li>
       <li>
         <b>VAL</b> 2528
@@ -127,14 +127,15 @@ const FullStackInfo = () => (
       <li>
         <b>CND</b>{" "}
         <span class="condition">
-          <span class="fill" style="width: 8%;"></span>
+          <span class="fill" style="width: 88%;"></span>
         </span>
       </li>
-      <li class="span-2">.308 round (5/72)</li>
+      <li class="span-2">Caffeine Lvls: Over 9000</li>
     </ul>
-    <p class="extra" style={{ overflowY: "auto", height: 100 }}>
-      <b>Description</b> Contrary to popular belief, Lorem Ipsum is not simply
-      random text. It has roots in a piece of classical
+    <p class="extra" style={{ paddingLeft: 0, overflowY: "auto", height: 100 }}>
+      The mastermind behind lemonade stands in the digital age. I turn caffeine
+      into companies and ideas into apps that might just take over the world...
+      or at least make it more interesting
     </p>
   </div>
 );
@@ -145,30 +146,30 @@ const TeamPlayerInfo = () => (
       <li class="vboy-wrap"></li>
       <li class="clear">
         <span class="fade-a">
-          <b>DAM</b> 52
+          <b>Team Wins</b> 27
         </span>
         <span class="fade-b">
-          <b>DPS</b>
-          49.3
+          <b>Group Eats</b>52
         </span>
       </li>
       <li>
-        <b>WG</b> 6.00
+        <b>High Fives</b> 345
       </li>
       <li>
-        <b>VAL</b> 2528
+        <b>Conflicts</b> 0
       </li>
       <li>
         <b>CND</b>{" "}
         <span class="condition">
-          <span class="fill" style="width: 8%;"></span>
+          <span class="fill" style="width: 98%;"></span>
         </span>
       </li>
-      <li class="span-2">.308 round (5/72)</li>
+      <li class="span-2">Morale 💯</li>
     </ul>
-    <p class="extra" style={{ overflowY: "auto", height: 100 }}>
-      <b>Description</b> Contrary to popular belief, Lorem Ipsum is not simply
-      random text. It has roots in a piece of classical
+    <p class="extra" style={{ paddingLeft: 0, overflowY: "auto", height: 100 }}>
+      I play well with others, especially when there’s pizza involved. I bring
+      teams together faster than a Wi-Fi connection, making sure every project
+      is a ‘high-five’ moment.
     </p>
   </div>
 );
@@ -179,15 +180,15 @@ const EntertainerInfo = () => (
       <li class="vboy-wrap"></li>
       <li class="clear">
         <span class="fade-a">
-          <b>DAM</b> 52
+          <b>Indie Hacks</b> 4
         </span>
         <span class="fade-b">
-          <b>DPS</b>
-          49.3
+          <b>Ideas</b>
+          72
         </span>
       </li>
       <li>
-        <b>WG</b> 6.00
+        <b>Connections</b> 38
       </li>
       <li>
         <b>VAL</b> 2528
@@ -195,14 +196,15 @@ const EntertainerInfo = () => (
       <li>
         <b>CND</b>{" "}
         <span class="condition">
-          <span class="fill" style="width: 8%;"></span>
+          <span class="fill" style="width: 88%;"></span>
         </span>
       </li>
-      <li class="span-2">.308 round (5/72)</li>
+      <li class="span-2">Fans: 1 (Hi Mom!)</li>
     </ul>
-    <p class="extra" style={{ overflowY: "auto", height: 100 }}>
-      <b>Description</b> Contrary to popular belief, Lorem Ipsum is not simply
-      random text. It has roots in a piece of classical
+    <p class="extra" style={{ paddingLeft: 0, overflowY: "auto", height: 100 }}>
+      Putting the 'pro' in procrastination by crafting stories and experiences
+      that actually make you want to finish your work early. My content’s so
+      engaging, even my mom shares it.
     </p>
   </div>
 );
@@ -212,31 +214,26 @@ const NerdInfo = () => (
     <ul class="info-table">
       <li class="vboy-wrap"></li>
       <li class="clear">
-        <span class="fade-a">
-          <b>DAM</b> 52
-        </span>
-        <span class="fade-b">
-          <b>DPS</b>
-          49.3
-        </span>
+        <b>Tomes Read</b> 137
       </li>
       <li>
-        <b>WG</b> 6.00
+        <b>Code Langs</b> 6
       </li>
       <li>
-        <b>VAL</b> 2528
+        <b>Gadgets</b> 11
       </li>
       <li>
         <b>CND</b>{" "}
         <span class="condition">
-          <span class="fill" style="width: 8%;"></span>
+          <span class="fill" style="width: 88%;"></span>
         </span>
       </li>
-      <li class="span-2">.308 round (5/72)</li>
+      <li class="span-2">Trivia Wins: 94%</li>
     </ul>
-    <p class="extra" style={{ overflowY: "auto", height: 100 }}>
-      <b>Description</b> Contrary to popular belief, Lorem Ipsum is not simply
-      random text. It has roots in a piece of classical
+    <p class="extra" style={{ paddingLeft: 0, overflowY: "auto", height: 100 }}>
+      The guru of geekery, with more books than friends and more curiosity than
+      a cat. I dive into code like it’s a ball pit and come out with digital
+      magic (and sometimes just more questions).
     </p>
   </div>
 );
@@ -247,30 +244,30 @@ const HandymanInfo = () => (
       <li class="vboy-wrap"></li>
       <li class="clear">
         <span class="fade-a">
-          <b>DAM</b> 52
+          <b>Bugs</b> 154
         </span>
         <span class="fade-b">
-          <b>DPS</b>
-          49.3
+          <b>Bugs Added</b>
+          154
         </span>
       </li>
       <li>
-        <b>WG</b> 6.00
+        <b>PRs</b> 300+
       </li>
       <li>
-        <b>VAL</b> 2528
+        <b>Eureka</b> 29
       </li>
       <li>
         <b>CND</b>{" "}
         <span class="condition">
-          <span class="fill" style="width: 8%;"></span>
+          <span class="fill" style="width: 91%;"></span>
         </span>
       </li>
-      <li class="span-2">.308 round (5/72)</li>
+      <li class="span-2">Production takedown - 7</li>
     </ul>
-    <p class="extra" style={{ overflowY: "auto", height: 100 }}>
-      <b>Description</b> Contrary to popular belief, Lorem Ipsum is not simply
-      random text. It has roots in a piece of classical
+    <p class="extra" style={{ paddingLeft: 0, overflowY: "auto", height: 100 }}>
+      I solve problems you didn’t even know you had, and occasionally create new
+      ones — ever debugged on production?
     </p>
   </div>
 );
