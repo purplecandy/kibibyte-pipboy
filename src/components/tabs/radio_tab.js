@@ -8,7 +8,7 @@ const RadioTab = () => (
     role="tab"
     data-play-sound={soundTypes.scifi_click}
   >
-    Radio
+    Tapes
   </a>
 );
 

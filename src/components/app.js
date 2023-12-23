@@ -5,12 +5,14 @@ import { sounds, soundTypes } from "../utils";
 
 const App = () => {
   const [isAgreed, setAgree] = useState(false);
+  const [radioSource, setRadioSource] = useState("");
 
   const soundRefs = useRef({
     nav_tab_click: useRef(),
     tab_click: useRef(),
     slide_click: useRef(),
     scifi_click: useRef(),
+    radio: useRef(),
   });
 
   const playSound = (type) => {
@@ -20,13 +22,27 @@ const App = () => {
     ref.current.play();
   };
 
+  const playAudio = (type) => {
+    const ref = soundRefs.current.radio;
+    // console.log("Refs", { soundRefs });
+    if (!ref) console.error("Invalid sound type defined");
+    setRadioSource(type);
+    setTimeout(() => ref.current.play());
+  };
+
   const onClickListener = (event) => {
     const attributes = Object.values(event.target.attributes);
     // console.log("Click event", { attributes });
-    const dataPlaySound = attributes.find((e) => e.name === "data-play-sound");
-    if (dataPlaySound) {
+
+    const audioEffectType = attributes.find(
+      (e) => e.name === "data-play-sound" || e.name === "data-play-audio"
+    );
+
+    if (audioEffectType.name === "data-play-sound") {
       // console.log("Play the sound");
-      playSound(dataPlaySound.value);
+      playSound(audioEffectType.value);
+    } else {
+      playAudio(audioEffectType.value);
     }
   };
   useEffect(() => {
@@ -38,7 +54,7 @@ const App = () => {
 
   return (
     <div>
-      <Terminal onAgree={() => setAgree(true)} />
+      {/* <Terminal onAgree={() => setAgree(true)} /> */}
       <Interface zIndex={isAgreed ? 0 : -4} />
       {/* <Interface /> */}
       {/* {isAgreed ? <Interface /> :} */}
@@ -55,6 +71,7 @@ const App = () => {
         ref={soundRefs.current.scifi_click}
         src={sounds.scifi_click}
       ></audio>
+      <audio ref={soundRefs.current.radio} src={radioSource}></audio>
     </div>
   );
 };
