@@ -67,6 +67,7 @@ const data = {
       title: "SkillLauncher",
       location: "Remote",
       status: "Completed",
+      hidden: true,
       position: "Full Stack Developer",
       promotions: [],
       duration: "MAY 2020 - JUL 2020",
@@ -231,6 +232,27 @@ const SideQuest = () => (
   </div>
 );
 
+const Redacted = ({ tabId }) => (
+  <div
+    class="info tab-pane fade"
+    id={`${tabId}`}
+    role="tabpanel"
+    aria-labelledby={`${tabId}-tab`}
+  >
+    <div class="post">
+      <p>
+        DATA CORRUPTED... <br />
+        ##$%&'()*+,-./:;=?@[\]^_`|~ <br />
+        ERROR! ERROR! ERR0R! 1N#0RM^T10N N0T F0UND <br />
+        FILE NOT FOUND. PLEASE CONTACT AN ADMINISTRATOR. <br />
+        [DATA EXPUNGED]
+        <br /> [REDACTED]
+        <br /> ACCESS DENIED...
+      </p>
+    </div>
+  </div>
+);
+
 const QuestsTabPanel = ({ content = data.QuestsTabPanel }) => {
   return (
     <div
@@ -252,6 +274,9 @@ const QuestsTabPanel = ({ content = data.QuestsTabPanel }) => {
               <a data-play-sound={soundTypes.slide_click}>{quest.data.title}</a>
             </li>
           ))}
+          <li data-bs-toggle="tab" data-bs-target="#embedded-inc" role="tab">
+            <a data-play-sound={soundTypes.slide_click}>Embedded Inc</a>
+          </li>
           <li class="disabled">
             <label>//Null</label>
           </li>
@@ -270,6 +295,7 @@ const QuestsTabPanel = ({ content = data.QuestsTabPanel }) => {
               isFirst={i === 0}
             />
           ))}
+          <Redacted tabId="embedded-inc" />
           <SideQuest />
         </div>
       </div>
