@@ -49,20 +49,20 @@ const Terminal = ({ onAgree, zIndex, display }) => (
           </p>
           <p>
             <a
-              href="/interface"
+              href="https://kibibyte.in/blog/"
               className={styles["no-decoration"]}
             >{`> goto blog`}</a>
           </p>
           <p>
             <a
-              href="/interface"
+              href="https://kibibyte.in/"
               className={styles["no-decoration"]}
             >{`> contact`}</a>
           </p>
           <p>{`> //Null`}</p>
           <p>
             <a
-              href="/interface"
+              href="https://github.com/purplecandy"
               className={styles["no-decoration"]}
             >{`> github`}</a>
           </p>
